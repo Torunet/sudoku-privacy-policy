@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Política de Privacidad | Sudoku - Puzles de Lógica</title>
+  <meta name="description" content="Política de privacidad oficial de la aplicación móvil Sudoku - Puzles de Lógica para Google Play Store. Cumplimiento RGPD, CCPA y Play Console Data Safety.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <meta name="theme-color" content="#2563EB">
+
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --primary-light: #eff6ff;
+      --accent: #0ea5e9;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-subtle: #f1f5f9;
+      --border: #e2e8f0;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --badge-bg: #dbeafe;
+      --badge-text: #1e40af;
+      --code-bg: #0f172a;
+      --code-text: #f8fafc;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    [data-theme="dark"] {
+      --primary: #3b82f6;
+      --primary-hover: #60a5fa;
+      --primary-light: #1e293b;
+      --accent: #38bdf8;
+      --bg-body: #0b0f19;
+      --bg-card: #131b2e;
+      --bg-card-subtle: #1c2640;
+      --border: #24304f;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --badge-bg: #1e2e4e;
+      --badge-text: #93c5fd;
+      --code-bg: #070a12;
+      --code-text: #e2e8f0;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4);
+      --shadow-lg: 0 10px 25px -5px rgb(0 0 0 / 0.5);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.7;
+      font-size: 16px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      background-color: rgba(255, 255, 255, 0.88);
+      border-bottom: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    [data-theme="dark"] .header {
+      background-color: rgba(19, 27, 46, 0.90);
+    }
+
+    .header-container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0.85rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    .brand-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 11px;
+      box-shadow: var(--shadow-sm);
+      object-fit: cover;
+      border: 1px solid var(--border);
+    }
+
+    .brand-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .brand-subtitle {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .btn-toggle {
+      background: var(--bg-card-subtle);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 0.45rem 0.85rem;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: var(--transition);
+    }
+
+    .btn-toggle:hover {
+      background: var(--border);
+    }
+
+    .layout {
+      max-width: 1040px;
+      margin: 2rem auto;
+      padding: 0 1.25rem;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 2.25rem;
+      align-items: start;
+    }
+
+    @media (max-width: 860px) {
+      .layout {
+        grid-template-columns: 1fr;
+        margin: 1.25rem auto;
+      }
+      .sidebar {
+        display: none;
+      }
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 5rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .sidebar-title {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      font-weight: 700;
+      margin-bottom: 0.85rem;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .toc-list a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      display: block;
+      padding: 0.35rem 0.6rem;
+      border-radius: 6px;
+      transition: var(--transition);
+      line-height: 1.4;
+    }
+
+    .toc-list a:hover {
+      color: var(--primary);
+      background: var(--primary-light);
+    }
+
+    .hero-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2.2rem 2.2rem;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #2563eb, #0ea5e9, #6366f1);
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.3rem 0.75rem;
+      border-radius: 9999px;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title {
+      font-size: 2.1rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      margin-bottom: 0.65rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .content-area {
+      display: flex;
+      flex-direction: column;
+      gap: 1.85rem;
+    }
+
+    .policy-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.85rem;
+      box-shadow: var(--shadow-sm);
+      scroll-margin-top: 5.5rem;
+      transition: var(--transition);
+    }
+
+    .policy-section:hover {
+      box-shadow: var(--shadow-md);
+      border-color: rgba(37, 99, 235, 0.3);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-icon {
+      font-size: 1.45rem;
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--primary-light);
+      border-radius: var(--radius-sm);
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: var(--text-main);
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul, ol {
+      margin-bottom: 1rem;
+      padding-left: 1.4rem;
+      color: var(--text-main);
+    }
+
+    li {
+      margin-bottom: 0.45rem;
+    }
+
+    .highlight-box {
+      background: var(--bg-card-subtle);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 1rem 1.25rem;
+      margin: 1.15rem 0;
+    }
+
+    .highlight-box.success {
+      border-left-color: var(--success);
+      background: rgba(16, 185, 129, 0.08);
+    }
+
+    .highlight-box.warning {
+      border-left-color: var(--warning);
+      background: rgba(245, 158, 11, 0.08);
+    }
+
+    .highlight-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .data-table-wrapper {
+      overflow-x: auto;
+      margin: 1.15rem 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+
+    .data-table th {
+      background: var(--bg-card-subtle);
+      color: var(--text-main);
+      font-weight: 700;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .data-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-main);
+    }
+
+    .data-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .badge-status {
+      display: inline-block;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+
+    .badge-no {
+      background: #dcfce7;
+      color: #166534;
+    }
+    [data-theme="dark"] .badge-no {
+      background: #14532d;
+      color: #86efac;
+    }
+
+    .badge-yes {
+      background: #fef3c7;
+      color: #92400e;
+    }
+    [data-theme="dark"] .badge-yes {
+      background: #78350f;
+      color: #fde68a;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.88em;
+      background: var(--bg-card-subtle);
+      color: var(--primary);
+      padding: 0.15rem 0.35rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: var(--transition);
+    }
+
+    a:hover {
+      color: var(--primary-hover);
+    }
+
+    .copy-banner {
+      background: linear-gradient(135deg, rgba(37,99,235,0.08) 0%, rgba(14,165,233,0.08) 100%);
+      border: 1px solid rgba(37,99,235,0.25);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .copy-banner-text {
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    .copy-btn {
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: var(--transition);
+    }
+
+    .copy-btn:hover {
+      background: var(--primary-hover);
+    }
+
+    .footer {
+      border-top: 1px solid var(--border);
+      margin-top: 4rem;
+      padding: 2.5rem 1.25rem;
+      background: var(--bg-card);
+      text-align: center;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    @media print {
+      body {
+        background: #fff !important;
+        color: #000 !important;
+        font-size: 11pt;
+      }
+      .header, .sidebar, .btn-toggle, .copy-banner, .footer-links {
+        display: none !important;
+      }
+      .layout {
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      .policy-section, .hero-card {
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+        page-break-inside: avoid;
+        margin-bottom: 1.5rem !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Sticky Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="#inicio" class="brand" title="Sudoku - Puzles de Lógica">
+        <img src="icon.png" alt="Icono de Sudoku Puzles de Lógica" class="brand-icon">
+        <div>
+          <div class="brand-title">Sudoku: Puzles de Lógica</div>
+          <div class="brand-subtitle">Vektor Studio • Política de Privacidad</div>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <button id="langToggleBtn" class="btn-toggle" onclick="toggleLanguage()" aria-label="Cambiar idioma">
+          <span id="langFlag">🇺🇸</span>
+          <span id="langText">English</span>
+        </button>
+
+        <button id="themeToggleBtn" class="btn-toggle" onclick="toggleTheme()" aria-label="Cambiar tema claro/oscuro">
+          <span id="themeIcon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="layout" id="inicio">
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-title" id="tocTitle">Contenido</div>
+      <nav>
+        <ul class="toc-list" id="tocNav">
+          <li><a href="#general">1. Información General</a></li>
+          <li><a href="#recopilacion">2. Recopilación de Datos</a></li>
+          <li><a href="#almacenamiento">3. Datos Locales del Juego</a></li>
+          <li><a href="#publicidad">4. Publicidad y Terceros (AdMob)</a></li>
+          <li><a href="#consentimiento">5. Consentimiento (RGPD / UMP)</a></li>
+          <li><a href="#permisos">6. Permisos del Dispositivo</a></li>
+          <li><a href="#menores">7. Privacidad de Menores (COPPA)</a></li>
+          <li><a href="#derechos">8. Tus Derechos (GDPR / CCPA)</a></li>
+          <li><a href="#seguridad">9. Seguridad de la Información</a></li>
+          <li><a href="#play-safety">10. Ficha Data Safety de Play Console</a></li>
+          <li><a href="#contacto">11. Contacto con el Desarrollador</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="content-area">
+
+      <!-- Quick Copy Link Notice for Play Console -->
+      <div class="copy-banner" id="copyBanner">
+        <div class="copy-banner-text">
+          <span id="copyPrompt">🔗 <strong>URL para Google Play Console:</strong> Utiliza esta dirección web para la ficha de tu app.</span>
+        </div>
+        <button class="copy-btn" onclick="copyPageUrl()">
+          <span>📋</span> <span id="copyBtnText">Copiar URL actual</span>
+        </button>
+      </div>
+
+      <!-- ================= SPANISH CONTENT CONTAINER ================= -->
+      <div id="content-es">
+
+        <!-- Hero Card -->
+        <div class="hero-card">
+          <div class="badge-pill">🛡️ Verificado para Google Play Store</div>
+          <h1 class="hero-title">Política de Privacidad</h1>
+          <p style="font-size: 1.05rem; color: var(--text-muted);">
+            Esta política de privacidad describe detalladamente cómo <strong>Sudoku: Puzles de Lógica</strong> (desarrollada por <strong>Vektor Studio</strong>) maneja tu información, tu privacidad y tus derechos al utilizar nuestra aplicación para dispositivos Android.
+          </p>
+
+          <div class="hero-meta">
+            <div class="hero-meta-item">
+              <span>📅</span> <strong>Última actualización:</strong> Octubre 2026
+            </div>
+            <div class="hero-meta-item">
+              <span>📱</span> <strong>Aplicación:</strong> Sudoku - Puzles de Lógica
+            </div>
+            <div class="hero-meta-item">
+              <span>📦</span> <strong>Package ID:</strong> <code>com.vektorstudio.sudoku</code>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 1 -->
+        <section class="policy-section" id="general">
+          <div class="section-header">
+            <div class="section-icon">🏛️</div>
+            <h2 class="section-title">1. Información General y Desarrollador</h2>
+          </div>
+          <p>
+            El responsable del tratamiento de los datos asociados a la aplicación móvil <strong>Sudoku: Puzles de Lógica</strong> es el equipo de desarrollo independiente <strong>Vektor Studio</strong> (liderado por Victor Hugo Palacios), en adelante "el Desarrollador" o "nosotros".
+          </p>
+          <p>
+            Nos tomamos muy en serio la privacidad de nuestros jugadores. Nuestra filosofía principal es ofrecer una experiencia de juego de lógica limpia, relajante y respetuosa con los datos del usuario.
+          </p>
+          <div class="highlight-box success">
+            <div class="highlight-title">✨ Juego Offline y Privacidad Primero (Privacy-First)</div>
+            <p>
+              <strong>Sudoku: Puzles de Lógica no requiere crear ninguna cuenta</strong>, ni registrar correos electrónicos, nombres o contraseñas. Puedes disfrutar del 100% de los tableros y retos diarios completamente sin conexión a internet.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="policy-section" id="recopilacion">
+          <div class="section-header">
+            <div class="section-icon">🔍</div>
+            <h2 class="section-title">2. Qué Datos Recopilamos y Qué NO Recopilamos</h2>
+          </div>
+          
+          <h3 style="margin: 1rem 0 0.5rem; font-size: 1.1rem;">❌ Datos que NO recopilamos directamente:</h3>
+          <ul>
+            <li><strong>No solicitamos información personal identificable (PII)</strong>: Nombre real, apellidos, dirección física, número telefónico ni correo electrónico.</li>
+            <li><strong>No accedemos a funciones sensibles</strong>: La app no accede a tu cámara, micrófono, libreta de contactos, calendario ni almacenamiento de fotos personales.</li>
+            <li><strong>No recopilamos ubicación GPS precisa</strong>: No solicitamos permisos de ubicación geográfica precisa (GPS/Fine Location).</li>
+            <li><strong>No recopilamos información financiera</strong>: No procesamos ni almacenamos números de tarjetas de crédito o débito.</li>
+          </ul>
+
+          <h3 style="margin: 1.25rem 0 0.5rem; font-size: 1.1rem;">⚙️ Datos recopilados automáticamente por servicios técnicos:</h3>
+          <p>
+            Para poder mantener el juego gratuito y garantizar su correcto funcionamiento en miles de modelos de dispositivos Android, utilizamos librerías de terceros (Google AdMob) que recopilan identificadores técnicos automatizados explicados a continuación.
+          </p>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="policy-section" id="almacenamiento">
+          <div class="section-header">
+            <div class="section-icon">💾</div>
+            <h2 class="section-title">3. Almacenamiento Local de Datos del Juego</h2>
+          </div>
+          <p>
+            Toda la progresión del juego se almacena de forma <strong>100% local en la memoria interna de tu propio dispositivo</strong> a través de una base de datos SQLite/Room y DataStore Preferences:
+          </p>
+          <ul>
+            <li><strong>Progreso de partidas:</strong> Tableros activos, celdas resueltas y notas de lápiz (pencil marks).</li>
+            <li><strong>Estadísticas personales:</strong> Número de partidas jugadas, partidas ganadas, mejor tiempo de resolución, tiempo promedio y rachas del reto diario.</li>
+            <li><strong>Configuración del jugador:</strong> Selección de tema visual (Modo Oscuro OLED, Vintage, Menta, etc.), activación de sonido, música y retroalimentación de vibración.</li>
+            <li><strong>Monedas virtuales y recompensas del juego:</strong> Pistas disponibles acumuladas dentro del juego.</li>
+          </ul>
+          <div class="highlight-box">
+            <p>
+              <strong>Control total del usuario:</strong> Estos datos nunca se envían a servidores propios ni se venden a nadie. Si deseas eliminar todos tus datos de juego, simplemente desinstala la aplicación o pulsa en <em>"Borrar datos de almacenamiento"</em> en los Ajustes de Aplicaciones de tu teléfono Android.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="policy-section" id="publicidad">
+          <div class="section-header">
+            <div class="section-icon">📢</div>
+            <h2 class="section-title">4. Redes Publicitarias y Socios Externos (SDKs)</h2>
+          </div>
+          <p>
+            Para sustentar los costos de desarrollo y mantener la app gratuita, mostramos publicidad no invasiva (banners, intersticiales y videos bonificados voluntarios para obtener pistas de juego). Para ello, integramos los siguientes Servicios de Confianza:
+          </p>
+
+          <h3 style="margin: 1rem 0 0.5rem; font-size: 1.1rem;">1. Google AdMob & Google Mobile Ads SDK</h3>
+          <p>
+            Google AdMob recopila y procesa ciertos identificadores del dispositivo con fines publicitarios y de diagnóstico:
+          </p>
+          <ul>
+            <li><strong>Identificador de publicidad de Google (GAID / AAID)</strong>: Permite a Google atribuir impresiones publicitarias y mostrar anuncios personalizados (si el usuario ha otorgado su consentimiento) o anuncios contextuales genéricos (si no lo ha otorgado).</li>
+            <li><strong>Dirección IP truncada</strong>: Utilizada únicamente para determinar la ubicación geográfica a nivel general (país/ciudad) y prevenir fraudes por clics automatizados.</li>
+            <li><strong>Datos de telemetría y diagnóstico del dispositivo</strong>: Versión de Android, modelo del fabricante, resolución de pantalla y tiempos de carga del anuncio para optimizar el rendimiento técnico.</li>
+          </ul>
+          <p>
+            Puedes revisar las políticas completas de Google en:  
+            <br>
+            🔗 <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Cómo utiliza Google los datos al usar apps de sus socios</a>  
+            <br>
+            🔗 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Política de Privacidad de Google</a>
+          </p>
+
+          <h3 style="margin: 1.25rem 0 0.5rem; font-size: 1.1rem;">2. Liftoff Monetize (Vungle) Mediation</h3>
+          <p>
+            Utilizamos el adaptador de mediación oficial de Liftoff Monetize para gestionar anuncios en formato de video bonificado (para obtener pistas gratuitas). Liftoff puede recopilar identificadores de dispositivo similares con el fin de medir la entrega efectiva del video y prevenir abusos.  
+            <br>
+            🔗 <a href="https://liftoff.io/privacy-policy/" target="_blank" rel="noopener noreferrer">Política de Privacidad de Liftoff Monetize</a>
+          </p>
+        </section>
+
+        <!-- Section 5 -->
+        <section class="policy-section" id="consentimiento">
+          <div class="section-header">
+            <div class="section-icon">🇪🇺</div>
+            <h2 class="section-title">5. Gestión de Consentimiento (RGPD / UMP)</h2>
+          </div>
+          <p>
+            Cumplimos estrictamente con el <strong>Reglamento General de Protección de Datos (RGPD / GDPR)</strong> de la Unión Europea y las directrices de privacidad de Google:
+          </p>
+          <ul>
+            <li>Para usuarios ubicados en el Espacio Económico Europeo (EEE) y el Reino Unido, la aplicación integra el <strong>SDK de la Plataforma de Mensajes para el Usuario (Google UMP)</strong> certificado por el marco TCF v2.2 de IAB.</li>
+            <li>Al iniciar la aplicación por primera vez en dichas regiones, se muestra un diálogo de consentimiento donde puedes elegir explícitamente entre:
+              <ol style="margin-top: 0.5rem;">
+                <li>Aceptar anuncios personalizados.</li>
+                <li>Rechazar anuncios personalizados y recibir únicamente anuncios contextuales no personalizados.</li>
+                <li>Gestionar opciones detalladas por proveedor.</li>
+              </ol>
+            </li>
+            <li>Puedes restablecer o revocar tu consentimiento en cualquier momento desde los ajustes de la app o borrando los datos de la app.</li>
+          </ul>
+        </section>
+
+        <!-- Section 6 -->
+        <section class="policy-section" id="permisos">
+          <div class="section-header">
+            <div class="section-icon">🔑</div>
+            <h2 class="section-title">6. Permisos de Android Solicitados</h2>
+          </div>
+          <p>
+            La aplicación únicamente declara los permisos estrictamente necesarios para su funcionamiento en el archivo <code>AndroidManifest.xml</code>:
+          </p>
+
+          <div class="data-table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Permiso</th>
+                  <th>Propósito y Uso Exclusivo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>android.permission.INTERNET</code></td>
+                  <td>Permite cargar anuncios a través de Google AdMob y consultar el formulario de consentimiento UMP. No se utiliza para transmitir datos personales.</td>
+                </tr>
+                <tr>
+                  <td><code>android.permission.ACCESS_NETWORK_STATE</code></td>
+                  <td>Permite a la aplicación comprobar si hay conexión activa (Wi-Fi o Datos) para no intentar solicitar anuncios innecesariamente en modo avión/sin conexión, ahorrando batería.</td>
+                </tr>
+                <tr>
+                  <td><code>android.permission.VIBRATE</code></td>
+                  <td>Permite la respuesta háptica táctil al pulsar números y casillas en el tablero de Sudoku. Puede desactivarse en cualquier momento desde la pantalla de Ajustes del juego.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Section 7 -->
+        <section class="policy-section" id="menores">
+          <div class="section-header">
+            <div class="section-icon">👶</div>
+            <h2 class="section-title">7. Privacidad de Menores (COPPA / Familias)</h2>
+          </div>
+          <p>
+            <strong>Sudoku: Puzles de Lógica</strong> es un juego de lógica y pasatiempos diseñado para un <strong>público general</strong> de todas las edades que disfruta resolviendo desafíos matemáticos y agilidad mental.
+          </p>
+          <ul>
+            <li>No recopilamos deliberadamente ninguna información de identificación personal de niños menores de 13 años (o la edad límite según la jurisdicción local, como 16 años en la Unión Europea).</li>
+            <li>En cumplimiento con la ley COPPA (Children's Online Privacy Protection Act) y las políticas para familias de Google Play, si un padre, madre o tutor legal considera que un menor nos ha proporcionado involuntariamente información a través de los canales de soporte, puede escribirnos a <a href="mailto:victorhugopalacios1203@gmail.com">victorhugopalacios1203@gmail.com</a> y procederemos a la eliminación inmediata de dicha información.</li>
+          </ul>
+        </section>
+
+        <!-- Section 8 -->
+        <section class="policy-section" id="derechos">
+          <div class="section-header">
+            <div class="section-icon">⚖️</div>
+            <h2 class="section-title">8. Tus Derechos de Privacidad (GDPR, CCPA y Globales)</h2>
+          </div>
+          <p>
+            Dependiendo de tu país de residencia (incluyendo la Unión Europea, el Reino Unido, California/EE.UU., Brasil y Latinoamérica), gozas de derechos fundamentales sobre tu información:
+          </p>
+          <ul>
+            <li><strong>Derecho de Acceso y Rectificación:</strong> Puedes consultar en cualquier momento los datos locales en la sección de Estadísticas de la app.</li>
+            <li><strong>Derecho de Supresión (Derecho al Olvido):</strong> Puedes borrar instantáneamente todos tus datos locales desinstalando la app o borrando los datos desde los ajustes del sistema de Android.</li>
+            <li><strong>Derecho a darte de baja de anuncios personalizados (Opt-Out):</strong> Puedes inhabilitar la personalización de anuncios en cualquier momento directamente en tu dispositivo Android realizando estos sencillos pasos:
+              <div class="highlight-box">
+                <strong>En tu dispositivo Android:</strong><br>
+                1. Abre la aplicación <strong>Ajustes</strong> o <em>Configuración</em> de tu teléfono.<br>
+                2. Entra en <strong>Google</strong> &rarr; <strong>Todos los servicios</strong> &rarr; <strong>Anuncios</strong>.<br>
+                3. Toca en <strong>"Borrar ID de publicidad"</strong> o <strong>"Restablecer ID de publicidad"</strong>.
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Section 9 -->
+        <section class="policy-section" id="seguridad">
+          <div class="section-header">
+            <div class="section-icon">🔒</div>
+            <h2 class="section-title">9. Seguridad de la Información</h2>
+          </div>
+          <p>
+            Implementamos medidas de seguridad técnicas y organizativas para proteger cualquier información gestionada:
+          </p>
+          <ul>
+            <li><strong>Cifrado en tránsito:</strong> Todas las solicitudes de red realizadas por el SDK de Google AdMob se realizan a través de conexiones seguras y encriptadas con protocolos modernos <strong>HTTPS (TLS 1.3)</strong>.</li>
+            <li><strong>Almacenamiento en Sandbox:</strong> La base de datos local de Sudoku reside en el almacenamiento protegido exclusivo de la aplicación gestionado por el sistema operativo Android, impidiendo el acceso no autorizado de otras aplicaciones del dispositivo.</li>
+          </ul>
+        </section>
+
+        <!-- Section 10: Play Console Summary -->
+        <section class="policy-section" id="play-safety">
+          <div class="section-header">
+            <div class="section-icon">📋</div>
+            <h2 class="section-title">10. Resumen de Seguridad de los Datos para Google Play Console</h2>
+          </div>
+          <p>
+            Para total transparencia ante los revisores de Google Play y nuestros usuarios, este es el resumen oficial de las declaraciones correspondientes a la sección <strong>"Seguridad de los datos" (Data Safety)</strong> de Play Console:
+          </p>
+
+          <div class="data-table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Pregunta / Tipo de Dato</th>
+                  <th>Declaración en Play Console</th>
+                  <th>Finalidad</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>¿La aplicación recopila datos?</strong></td>
+                  <td><span class="badge-status badge-yes">Sí (Vía SDK AdMob)</span></td>
+                  <td>Para mostrar publicidad y métricas de errores.</td>
+                </tr>
+                <tr>
+                  <td><strong>¿Los datos se transmiten cifrados?</strong></td>
+                  <td><span class="badge-status badge-no">Sí (HTTPS / TLS)</span></td>
+                  <td>Toda comunicación de red viaja encriptada.</td>
+                </tr>
+                <tr>
+                  <td><strong>¿El usuario puede solicitar eliminación?</strong></td>
+                  <td><span class="badge-status badge-no">Sí</span></td>
+                  <td>Borrando la app o borrando el ID publicitario en Android.</td>
+                </tr>
+                <tr>
+                  <td><strong>Ubicación aproximada</strong></td>
+                  <td><span class="badge-status badge-yes">Recopilado por terceros</span></td>
+                  <td>Publicidad y prevención de fraude (AdMob / IP).</td>
+                </tr>
+                <tr>
+                  <td><strong>Identificadores de dispositivo (GAID)</strong></td>
+                  <td><span class="badge-status badge-yes">Recopilado por terceros</span></td>
+                  <td>Publicidad, análisis de rendimiento y prevención de fraude.</td>
+                </tr>
+                <tr>
+                  <td><strong>Nombre, Email, Teléfono, Fotos, Archivos</strong></td>
+                  <td><span class="badge-status badge-no">No recopilado</span></td>
+                  <td>La app no solicita ni almacena estos datos.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Section 11 -->
+        <section class="policy-section" id="contacto">
+          <div class="section-header">
+            <div class="section-icon">📫</div>
+            <h2 class="section-title">11. Contacto con el Desarrollador</h2>
+          </div>
+          <p>
+            Si tienes cualquier duda, pregunta, sugerencia o solicitud relacionada con esta Política de Privacidad o con el funcionamiento de la aplicación, puedes ponerte en contacto directamente con nosotros:
+          </p>
+          <div class="highlight-box success">
+            <p style="margin-bottom: 0.35rem;">
+              <strong>👤 Desarrollador:</strong> Victor Hugo Palacios — Vektor Studio
+            </p>
+            <p style="margin-bottom: 0.35rem;">
+              <strong>✉️ Correo electrónico de soporte:</strong> <a href="mailto:victorhugopalacios1203@gmail.com">victorhugopalacios1203@gmail.com</a>
+            </p>
+            <p style="margin-bottom: 0;">
+              <strong>📍 Plataforma:</strong> Google Play Store — Distribución Global
+            </p>
+          </div>
+        </section>
+
+      </div>
+      <!-- ================= END SPANISH CONTENT CONTAINER ================= -->
+
+
+      <!-- ================= ENGLISH CONTENT CONTAINER ================= -->
+      <div id="content-en" style="display: none;">
+
+        <!-- Hero Card -->
+        <div class="hero-card">
+          <div class="badge-pill">🛡️ Google Play Store Verified</div>
+          <h1 class="hero-title">Privacy Policy</h1>
+          <p style="font-size: 1.05rem; color: var(--text-muted);">
+            This privacy policy describes in detail how <strong>Sudoku: Classic Logic Puzzles</strong> (developed by <strong>Vektor Studio</strong>) handles your information, your privacy, and your rights when using our Android mobile application.
+          </p>
+
+          <div class="hero-meta">
+            <div class="hero-meta-item">
+              <span>📅</span> <strong>Last Updated:</strong> October 2026
+            </div>
+            <div class="hero-meta-item">
+              <span>📱</span> <strong>Application:</strong> Sudoku - Logic Puzzles (Sudoku Master)
+            </div>
+            <div class="hero-meta-item">
+              <span>📦</span> <strong>Package ID:</strong> <code>com.vektorstudio.sudoku</code>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 1 -->
+        <section class="policy-section" id="general-en">
+          <div class="section-header">
+            <div class="section-icon">🏛️</div>
+            <h2 class="section-title">1. General Information & Developer</h2>
+          </div>
+          <p>
+            The party responsible for data processing associated with the mobile application <strong>Sudoku: Classic Logic Puzzles</strong> is the independent development team <strong>Vektor Studio</strong> (led by Victor Hugo Palacios), hereinafter referred to as "the Developer", "we", or "us".
+          </p>
+          <p>
+            We take player privacy seriously. Our core design philosophy is to provide a clean, distraction-free, relaxing puzzle-solving experience that respects user data.
+          </p>
+          <div class="highlight-box success">
+            <div class="highlight-title">✨ Offline-First & Privacy-First Architecture</div>
+            <p>
+              <strong>Sudoku: Logic Puzzles does not require you to create an account</strong>, register your email address, or log in with social networks. You can enjoy 100% of the game boards and daily challenges entirely offline.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="policy-section" id="recopilacion-en">
+          <div class="section-header">
+            <div class="section-icon">🔍</div>
+            <h2 class="section-title">2. Information We Do NOT Collect & Data Collected</h2>
+          </div>
+          
+          <h3 style="margin: 1rem 0 0.5rem; font-size: 1.1rem;">❌ Data we do NOT collect directly:</h3>
+          <ul>
+            <li><strong>No Personally Identifiable Information (PII)</strong>: We do not collect your real name, home address, phone number, or email address.</li>
+            <li><strong>No sensitive hardware access</strong>: The app never accesses your device camera, microphone, contact list, photos, or media files.</li>
+            <li><strong>No precise GPS location</strong>: We do not request fine or background location permissions.</li>
+            <li><strong>No financial information</strong>: We do not process or store credit/debit card details.</li>
+          </ul>
+
+          <h3 style="margin: 1.25rem 0 0.5rem; font-size: 1.1rem;">⚙️ Automatically processed technical data:</h3>
+          <p>
+            To keep the game free to play and ensure seamless stability across thousands of Android device models, we use industry-standard third-party SDKs (Google AdMob) that collect automated technical identifiers as described below.
+          </p>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="policy-section" id="almacenamiento-en">
+          <div class="section-header">
+            <div class="section-icon">💾</div>
+            <h2 class="section-title">3. Local Storage of Game Data</h2>
+          </div>
+          <p>
+            All game progress is stored <strong>100% locally on your own device's internal storage</strong> using Android Room Database and DataStore Preferences:
+          </p>
+          <ul>
+            <li><strong>Board progress:</strong> Saved puzzle states, solved cells, and pencil notes.</li>
+            <li><strong>Personal statistics:</strong> Games played, games won, best solving time, average time, and daily challenge streaks.</li>
+            <li><strong>User preferences:</strong> Visual theme selection (OLED Dark Mode, Vintage Paper, Mint, etc.), sound effects, and haptic vibration feedback.</li>
+            <li><strong>Virtual coins & hints:</strong> Earned booster balance used within the game.</li>
+          </ul>
+          <div class="highlight-box">
+            <p>
+              <strong>Complete user control:</strong> This data is never uploaded to private developer servers and is never sold. If you wish to wipe all your game data, simply uninstall the application or choose <em>"Clear Storage / Clear Data"</em> in your Android App Settings.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="policy-section" id="publicidad-en">
+          <div class="section-header">
+            <div class="section-icon">📢</div>
+            <h2 class="section-title">4. Advertising Networks & Third-Party SDKs</h2>
+          </div>
+          <p>
+            To support ongoing development and offer the app for free, we display non-intrusive advertisements (banners, interstitials, and optional rewarded videos to unlock hints). We integrate the following trusted partners:
+          </p>
+
+          <h3 style="margin: 1rem 0 0.5rem; font-size: 1.1rem;">1. Google AdMob & Google Mobile Ads SDK</h3>
+          <p>
+            Google AdMob collects and processes device identifiers for advertising and diagnostic purposes:
+          </p>
+          <ul>
+            <li><strong>Google Advertising ID (GAID / AAID)</strong>: Enables Google to attribute ad impressions and serve personalized ads (if consented) or non-personalized contextual ads (if consent is denied).</li>
+            <li><strong>Truncated IP Address</strong>: Used solely for coarse geographical routing (country/city level) and ad-fraud detection.</li>
+            <li><strong>Technical Diagnostics & Device Info</strong>: Android OS version, hardware model, screen resolution, and ad loading latency to ensure app stability.</li>
+          </ul>
+          <p>
+            Review Google's full policies at:  
+            <br>
+            🔗 <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">How Google uses information from sites or apps that use our services</a>  
+            <br>
+            🔗 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>
+          </p>
+
+          <h3 style="margin: 1.25rem 0 0.5rem; font-size: 1.1rem;">2. Liftoff Monetize (Vungle) Mediation</h3>
+          <p>
+            We use Liftoff Monetize via the official Google mediation adapter to serve optional rewarded video ads (for free game hints). Liftoff may process device identifiers to verify reward completion and protect against fraudulent activity.  
+            <br>
+            🔗 <a href="https://liftoff.io/privacy-policy/" target="_blank" rel="noopener noreferrer">Liftoff Monetize Privacy Policy</a>
+          </p>
+        </section>
+
+        <!-- Section 5 -->
+        <section class="policy-section" id="consentimiento-en">
+          <div class="section-header">
+            <div class="section-icon">🇪🇺</div>
+            <h2 class="section-title">5. Consent Management (GDPR / Google UMP)</h2>
+          </div>
+          <p>
+            We strictly comply with the <strong>General Data Protection Regulation (GDPR)</strong> and ePrivacy guidelines:
+          </p>
+          <ul>
+            <li>For players located in the European Economic Area (EEA) and the United Kingdom, the app integrates the certified <strong>Google User Messaging Platform (UMP) SDK</strong> compliant with IAB TCF v2.2.</li>
+            <li>Upon first launching the app in these regions, a consent dialogue enables you to freely grant, deny, or customize consent for ad personalization and data processing.</li>
+            <li>You can reset or change your preferences at any time through the app settings or by resetting app storage.</li>
+          </ul>
+        </section>
+
+        <!-- Section 6 -->
+        <section class="policy-section" id="permisos-en">
+          <div class="section-header">
+            <div class="section-icon">🔑</div>
+            <h2 class="section-title">6. Android Permissions Requested</h2>
+          </div>
+          <p>
+            The application only requests permissions strictly required for basic functionality in <code>AndroidManifest.xml</code>:
+          </p>
+
+          <div class="data-table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Permission</th>
+                  <th>Exact Purpose & Scope</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>android.permission.INTERNET</code></td>
+                  <td>Allows loading ads through Google AdMob and checking the UMP consent dialogue. Not used to collect or transmit personal user files.</td>
+                </tr>
+                <tr>
+                  <td><code>android.permission.ACCESS_NETWORK_STATE</code></td>
+                  <td>Enables checking if an active network connection exists prior to requesting ads, preventing battery drain when playing offline.</td>
+                </tr>
+                <tr>
+                  <td><code>android.permission.VIBRATE</code></td>
+                  <td>Provides haptic tactile feedback when tapping numbers and cells on the Sudoku board. Can be toggled on/off in Game Settings.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Section 7 -->
+        <section class="policy-section" id="menores-en">
+          <div class="section-header">
+            <div class="section-icon">👶</div>
+            <h2 class="section-title">7. Children's Privacy (COPPA & Play Families)</h2>
+          </div>
+          <p>
+            <strong>Sudoku: Classic Logic Puzzles</strong> is a general-audience brain teaser game designed for players of all ages who enjoy numbers and logic puzzles.
+          </p>
+          <ul>
+            <li>We do not knowingly collect personal information from children under 13 (or under 16 in the European Union).</li>
+            <li>In compliance with the U.S. Children's Online Privacy Protection Act (COPPA) and Google Play Families Policies, if a parent or legal guardian discovers that a child has provided personal details through customer support channels, please contact us at <a href="mailto:victorhugopalacios1203@gmail.com">victorhugopalacios1203@gmail.com</a> for immediate deletion.</li>
+          </ul>
+        </section>
+
+        <!-- Section 8 -->
+        <section class="policy-section" id="derechos-en">
+          <div class="section-header">
+            <div class="section-icon">⚖️</div>
+            <h2 class="section-title">8. Your Privacy Rights (GDPR, CCPA & Worldwide)</h2>
+          </div>
+          <p>
+            Depending on your jurisdiction (including EU/EEA, UK, California, and Latin America), you possess distinct privacy rights:
+          </p>
+          <ul>
+            <li><strong>Right of Access & Correction:</strong> You can view all saved statistics and game history inside the in-game Statistics screen.</li>
+            <li><strong>Right of Erasure (Right to be Forgotten):</strong> You can wipe all game data instantly by uninstalling the application or clearing storage in Android settings.</li>
+            <li><strong>Right to Opt Out of Targeted Ads:</strong> You can disable interest-based ad tracking anytime on your Android device:
+              <div class="highlight-box">
+                <strong>On your Android Device:</strong><br>
+                1. Open your device <strong>Settings</strong>.<br>
+                2. Navigate to <strong>Google</strong> &rarr; <strong>All services</strong> &rarr; <strong>Ads</strong>.<br>
+                3. Tap <strong>"Delete advertising ID"</strong> or <strong>"Reset advertising ID"</strong>.
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Section 9 -->
+        <section class="policy-section" id="seguridad-en">
+          <div class="section-header">
+            <div class="section-icon">🔒</div>
+            <h2 class="section-title">9. Data Security</h2>
+          </div>
+          <p>
+            We implement administrative and technical safeguards to ensure data safety:
+          </p>
+          <ul>
+            <li><strong>Encryption in Transit:</strong> All communications executed by Google AdMob SDK employ modern, encrypted <strong>HTTPS (TLS 1.3)</strong> protocols.</li>
+            <li><strong>App Sandbox Protection:</strong> The local Sudoku database is stored within Android's sandboxed storage environment, inaccessible to third-party applications on your phone.</li>
+          </ul>
+        </section>
+
+        <!-- Section 10: Play Console Summary -->
+        <section class="policy-section" id="play-safety-en">
+          <div class="section-header">
+            <div class="section-icon">📋</div>
+            <h2 class="section-title">10. Google Play Console Data Safety Breakdown</h2>
+          </div>
+          <p>
+            Below is the official reference for the Google Play Console <strong>Data Safety</strong> questionnaire:
+          </p>
+
+          <div class="data-table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Data Category</th>
+                  <th>Play Console Status</th>
+                  <th>Purpose</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Does app collect data?</strong></td>
+                  <td><span class="badge-status badge-yes">Yes (Via AdMob SDK)</span></td>
+                  <td>For ad serving and error monitoring.</td>
+                </tr>
+                <tr>
+                  <td><strong>Encrypted in transit?</strong></td>
+                  <td><span class="badge-status badge-no">Yes (HTTPS / TLS)</span></td>
+                  <td>All external network traffic is encrypted.</td>
+                </tr>
+                <tr>
+                  <td><strong>Can user request deletion?</strong></td>
+                  <td><span class="badge-status badge-no">Yes</span></td>
+                  <td>By uninstalling app or resetting GAID in Android settings.</td>
+                </tr>
+                <tr>
+                  <td><strong>Approximate Location</strong></td>
+                  <td><span class="badge-status badge-yes">Collected by 3rd party</span></td>
+                  <td>Ad serving and fraud prevention (AdMob via IP).</td>
+                </tr>
+                <tr>
+                  <td><strong>Device or other IDs (GAID)</strong></td>
+                  <td><span class="badge-status badge-yes">Collected by 3rd party</span></td>
+                  <td>Ad serving, analytics, and fraud prevention.</td>
+                </tr>
+                <tr>
+                  <td><strong>Name, Email, Contacts, Media</strong></td>
+                  <td><span class="badge-status badge-no">Not Collected</span></td>
+                  <td>App never accesses or collects user personal files.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Section 11 -->
+        <section class="policy-section" id="contacto-en">
+          <div class="section-header">
+            <div class="section-icon">📫</div>
+            <h2 class="section-title">11. Developer Contact</h2>
+          </div>
+          <p>
+            If you have questions, inquiries, or feedback regarding this Privacy Policy, please contact us directly:
+          </p>
+          <div class="highlight-box success">
+            <p style="margin-bottom: 0.35rem;">
+              <strong>👤 Developer:</strong> Victor Hugo Palacios — Vektor Studio
+            </p>
+            <p style="margin-bottom: 0.35rem;">
+              <strong>✉️ Support Email:</strong> <a href="mailto:victorhugopalacios1203@gmail.com">victorhugopalacios1203@gmail.com</a>
+            </p>
+            <p style="margin-bottom: 0;">
+              <strong>📍 Platform:</strong> Google Play Store — Worldwide Distribution
+            </p>
+          </div>
+        </section>
+
+      </div>
+      <!-- ================= END ENGLISH CONTENT CONTAINER ================= -->
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>
+      &copy; 2026 <strong>Vektor Studio</strong>. Todos los derechos reservados.
+    </p>
+    <p style="font-size: 0.8rem; margin-top: 0.35rem;">
+      Documento oficial de Política de Privacidad para <strong>Sudoku - Puzles de Lógica</strong> (Android).
+    </p>
+    <div class="footer-links">
+      <a href="#inicio">Volver arriba</a>
+      <a href="javascript:window.print()">Imprimir / Guardar en PDF</a>
+      <a href="mailto:victorhugopalacios1203@gmail.com">Contacto de Soporte</a>
+    </div>
+  </footer>
+
+  <!-- Script for Language, Theme & Copy URL -->
+  <script>
+    let currentLang = 'es';
+    let currentTheme = 'light';
+
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      currentTheme = 'dark';
+      document.documentElement.setAttribute('data-theme', 'dark');
+      updateThemeButton();
+    }
+
+    function toggleTheme() {
+      currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', currentTheme);
+      updateThemeButton();
+    }
+
+    function updateThemeButton() {
+      const icon = document.getElementById('themeIcon');
+      if (icon) {
+        icon.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+      }
+    }
+
+    function copyPageUrl() {
+      const url = window.location.href;
+      navigator.clipboard.writeText(url).then(() => {
+        const btnText = document.getElementById('copyBtnText');
+        const orig = btnText.textContent;
+        btnText.textContent = currentLang === 'es' ? '¡URL Copiada!' : 'Copied!';
+        setTimeout(() => {
+          btnText.textContent = orig;
+        }, 2200);
+      }).catch(() => {
+        alert(url);
+      });
+    }
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'es' ? 'en' : 'es';
+      applyLanguage(currentLang);
+    }
+
+    function applyLanguage(lang) {
+      const contentEs = document.getElementById('content-es');
+      const contentEn = document.getElementById('content-en');
+      const langFlag = document.getElementById('langFlag');
+      const langText = document.getElementById('langText');
+      const tocTitle = document.getElementById('tocTitle');
+      const tocNav = document.getElementById('tocNav');
+      const copyPrompt = document.getElementById('copyPrompt');
+      const copyBtnText = document.getElementById('copyBtnText');
+
+      if (lang === 'en') {
+        contentEs.style.display = 'none';
+        contentEn.style.display = 'block';
+        langFlag.textContent = '🇪🇸';
+        langText.textContent = 'Español';
+        tocTitle.textContent = 'Table of Contents';
+        copyPrompt.innerHTML = '🔗 <strong>Google Play Console URL:</strong> Use this public URL in your Play Console dashboard.';
+        copyBtnText.textContent = 'Copy Current URL';
+        document.documentElement.lang = 'en';
+        document.title = 'Privacy Policy | Sudoku - Classic Logic Puzzles';
+
+        tocNav.innerHTML = `
+          <li><a href="#general-en">1. General Information</a></li>
+          <li><a href="#recopilacion-en">2. Data Collection</a></li>
+          <li><a href="#almacenamiento-en">3. Local Game Data</a></li>
+          <li><a href="#publicidad-en">4. Advertising & AdMob</a></li>
+          <li><a href="#consentimiento-en">5. Consent (GDPR / UMP)</a></li>
+          <li><a href="#permisos-en">6. Android Permissions</a></li>
+          <li><a href="#menores-en">7. Children's Privacy</a></li>
+          <li><a href="#derechos-en">8. Your Rights (GDPR/CCPA)</a></li>
+          <li><a href="#seguridad-en">9. Data Security</a></li>
+          <li><a href="#play-safety-en">10. Play Console Data Safety</a></li>
+          <li><a href="#contacto-en">11. Developer Contact</a></li>
+        `;
+      } else {
+        contentEs.style.display = 'block';
+        contentEn.style.display = 'none';
+        langFlag.textContent = '🇺🇸';
+        langText.textContent = 'English';
+        tocTitle.textContent = 'Contenido';
+        copyPrompt.innerHTML = '🔗 <strong>URL para Google Play Console:</strong> Utiliza esta dirección web para la ficha de tu app.';
+        copyBtnText.textContent = 'Copiar URL actual';
+        document.documentElement.lang = 'es';
+        document.title = 'Política de Privacidad | Sudoku - Puzles de Lógica';
+
+        tocNav.innerHTML = `
+          <li><a href="#general">1. Información General</a></li>
+          <li><a href="#recopilacion">2. Recopilación de Datos</a></li>
+          <li><a href="#almacenamiento">3. Datos Locales del Juego</a></li>
+          <li><a href="#publicidad">4. Publicidad y Terceros (AdMob)</a></li>
+          <li><a href="#consentimiento">5. Consentimiento (RGPD / UMP)</a></li>
+          <li><a href="#permisos">6. Permisos del Dispositivo</a></li>
+          <li><a href="#menores">7. Privacidad de Menores (COPPA)</a></li>
+          <li><a href="#derechos">8. Tus Derechos (GDPR / CCPA)</a></li>
+          <li><a href="#seguridad">9. Seguridad de la Información</a></li>
+          <li><a href="#play-safety">10. Ficha Data Safety de Play Console</a></li>
+          <li><a href="#contacto">11. Contacto con el Desarrollador</a></li>
+        `;
+      }
+    }
+  </script>
+</body>
+</html>
